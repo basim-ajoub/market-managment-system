@@ -1,18 +1,38 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+   <h1 class="head-title">Dreams Market</h1>
+    <Boxes />
+    <HomeChart />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Boxes from "../components/home/boxCom.vue";
+import HomeChart from "../components/home/dailycharts.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Boxes,HomeChart,
   },
 };
 </script>
+<style lang="scss">
+$permanentFont: "Permanent Marker", cursive;
+$kashenFont: "Kaushan Script", cursive;
+$meriendaFont: "Merienda", cursive;
+$luckiestFont: "Luckiest Guy", cursive;
+.home{
+  width: 100%;
+  height: 98.4%;
+  padding-top: 10px;
+  .head-title{
+    margin-left: 1%;
+    margin-bottom: 40px;
+    font-family: $kashenFont;
+    letter-spacing: 1px;
+    
+  }
+}
+</style>
